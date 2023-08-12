@@ -19,5 +19,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    #esta es la primera ruta, el la app tareas, por eso agregarmos el tasks/ y luego se inclyen todas las rutas del urls.py
     path("tasks/", include ("tareas.urls"))
 ]
