@@ -12,3 +12,8 @@ Crear API:
 Del modelo que vayamos a utilizar o base de datos, debemos seleccionar los datos que van a ser enviados desde el back-end para que puedan ser convertidos a .JSON, esto se hace desde el archivo "serializer.py" y se debe crear la clase.
 Luego hay que configurar las "views.py" con la creación de una clase que defina los datos que se desean "serializar(convertir)" con los datos a mostrar de la DB y ya se puede empezar con las tareas cotidianas de un CRUD.
 En el "urls.ps" se guardan las rutas que el frontend va a consultar.   
+
+Para crear la documentacion automática, debemos instalar coreapi, agregarla en "INSTALLED APPS" y agregar esta configuración en el settings.py
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
+}
